@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 9</h1>
+	<p>
+		Дано покази температур (довільна кількість). Розробити функцію, яка дозволить підрахувати
+		кількість від’ємних показів температури.
+	</p>
+
+	<script>
+		// введіть показники температури за 7 днів
+		// будуємо масив 
+		const array = []
+		for (let j = 0; j < 7; j++) {
+			const dailyTemperature = parseInt(prompt(`введіть значення температури за добу ${j + 1}`))
+			array.push(dailyTemperature)
+		}
+		//будуємо функцію
+		function negativeTemperature(...temperature) {
+			let counterNegativeTemperature = 0
+			for (let i = 0; i < temperature.length; i++) {
+				if (temperature[i] < 0)
+					counterNegativeTemperature++
+			}
+			return counterNegativeTemperature
+		}
+
+		let result = negativeTemperature(...array)
+
+		document.write(`кількість від’ємних показів температури ${result}`)
+
+	</script>
+
+</body>
+
+</html>

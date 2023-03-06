@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 4</h1>
+	<p>
+		Створити окремі функції, які для 4 чисел знаходять:
+		1)суму;
+		2)добуток;
+		3)середнє арифметичне;
+		4)мінімальне значення.
+	</p>
+	<script>
+		// функція знаходження суми
+		function fourNumbers(a, b, c, d) {
+			sum = a + b + c + d
+			return sum
+		}
+		// функція знаходження добутку
+		function fourNumbers1(a, b, c, d) {
+			multiplication = a * b * c * d
+			return multiplication
+		}
+		// функція знаходження середнього арифметичного
+		function fourNumbers2(a, b, c, d) {
+			sum = a + b + c + d
+			averageNumber = sum / 4
+			return averageNumber
+		}
+		// функція знаходження мінімального значення
+		function fourNumbers3(a, b, c, d) {
+			minNumber = Math.min(a, b, c, d)
+			return minNumber
+		}
+
+		let result = fourNumbers(5, 6, 4, 5)
+		document.write(`${result}<br>`)
+
+		let result1 = fourNumbers1(5, 6, 4, 5)
+		document.write(`${result1}<br>`)
+
+		let result2 = fourNumbers2(5, 6, 4, 5)
+		document.write(`${result2}<br>`)
+
+		let result3 = fourNumbers3(5, 6, 4, 5)
+		document.write(`${result3}`)
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 6</h1>
+	<p>
+		Створити окремі функції, які переводять:
+		Сантиметри у дюйми;
+		Кілограми у фунти;
+		Кілометри у милі.
+	</p>
+
+	<script>
+		// перетворення метрів в дюйми
+		function converterInch(meter) {
+			return (meter * 39.37)
+		}
+		// перетворення кілограмів в фунти
+		function converterPound(kilograms) {
+			return (kilograms * 2.20)
+		}
+		// перетвореня кілометри в милі
+		function convertMiles(kilometer) {
+			return (kilometer * 0.62)
+		}
+
+		let meter = parseInt(prompt(`введіть метри`))
+		let kilograms = parseInt(prompt(`введіть кілограми`))
+		let kilometer = parseInt(prompt(`введіть кілометри`))
+
+		let result = converterInch(meter)
+		document.write(`${result}<br>`)
+
+		let result1 = converterPound(kilograms)
+		document.write(`${result1}<br>`)
+
+		let result2 = convertMiles(kilometer)
+		document.write(`${result2}`)
+
+	</script>
+</body>
+
+</html>

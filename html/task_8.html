@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 7</h1>
+	<p>
+		Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень
+		(шляхи до зображень передаються у функцію)
+	</p>
+	<script>
+		// описуємо функцію
+
+		function selectRandomImage(img1, img2, img3, img4) {
+			let numberImage = 0
+			let minNumber = 0
+			let maxNumber = 3
+			let randomImage = minNumber + Math.floor(Math.random() * 4)
+			switch (randomImage) {
+				case 0: numberImage = img1
+					break
+				case 1: numberImage = img2
+					break
+				case 2: numberImage = img3
+					break
+				case 3: numberImage = img4
+					break
+			}
+			return `<img src="${numberImage}" alt="${numberImage}">`
+		}
+
+		// визиваємо функцію
+		let result = selectRandomImage('./img/img_1.jpg', './img/img_2.jpg', './img/img_3.jpg', './img/img_4.jpg')
+		// виводимо картинку
+		document.write(`${result}`)
+
+	</script>
+	<!-- <img src="./img/img_1.jpg" alt=""> -->
+
+</body>
+
+</html>

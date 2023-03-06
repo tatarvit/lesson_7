@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 10</h1>
+	<p>
+		Дано покази температур (довільна кількість). Розробити функцію, яка дозволить знайти середнє
+		значення для додатних показів температури.
+	</p>
+
+	<script>
+		//вводимо дані
+		const day = parseInt(prompt(`введіть кількькісь днів під час яких проводилися заміри температур`))
+		const array = []
+		for (let i = 0; i < day; i++) {
+			const dailyTemperature = parseFloat(prompt(`введіть показники температури за ${i + 1}`))
+			array.push(dailyTemperature)
+		}
+		// описуємо функцію
+
+		function getAveragePositiveTemperature(...temperature) {
+			let counterPositiveTemperature = 0
+			let sumPositiveTemperature = 0
+			for (let j = 0; j < temperature.length; j++) {
+				if (temperature[j] > 0)
+					sumPositiveTemperature += temperature[j]
+				if (temperature[j] > 0)
+					counterPositiveTemperature++
+
+			}
+			return sumPositiveTemperature / counterPositiveTemperature
+		}
+		let result = getAveragePositiveTemperature(...array)
+
+		document.write(`середнє	значення для додатних показів температури - ${result}`)
+		// Тут напевно не корректно ставити дві іфки, пробував по одній і змінював містами,
+		//по різному вираховувала середнє значення, але не те що потрібне
+
+	</script>
+
+
+</body>
+
+</html>

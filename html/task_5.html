@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача 5</h1>
+	<p>
+		Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів:
+		кількість парних, кількість додатних, кількість більших за 100.
+	</p>
+
+	<script>
+		// задачу зробив методом тика працю, не працю, що зробив так і не зрозумів, починав робити через 
+		//аргументс, не міг вивести результат, ментор порадив вивести через масив. Переробив через массив.
+		// результат є, але наскільки правильно не розумію і не відчуваю, дуже важко далася задача
+
+		// Описуємо функцію
+		function getDataThreeNumbers(...number) {
+			let counterEvenNumbers = 0
+			let counterPositiveNumbers = 0
+			let counterNumbersMoreHundred = 0
+			for (let i = 0; i < number.length; i++) {
+				if (number[i] % 2 === 0)
+					counterEvenNumbers++
+				if (number[i] > 0)
+					counterPositiveNumbers++
+				if (number[i] > 100)
+					counterNumbersMoreHundred++
+			}
+			// повертаємо результат
+			return { counterEvenNumbers, counterPositiveNumbers, counterNumbersMoreHundred }
+		}
+
+		// Вводимо дані, створюємо масив
+		const array = []
+		for (let j = 0; j < 3; j++) {
+			const number = parseInt(prompt(`введіть ${j + 1} число`))
+			array.push(number)
+		}
+
+
+		const result = getDataThreeNumbers(...array)
+
+		document.write(`кількість парних чисел складає ${result.counterEvenNumbers}<br>`)
+		document.write(`кількість додатніх чисел складає ${result.counterPositiveNumbers}<br>`)
+		document.write(`кількість чисел, які більше 100 складає ${result.counterNumbersMoreHundred}<br>`)
+	</script>
+
+
+</body>
+
+</html>
